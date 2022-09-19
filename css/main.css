@@ -16,7 +16,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   row-gap: 25px; }
   body .bg-fondo {
-    background: #aed8ee;
     background: radial-gradient(circle, #aed8ee 0%, #94bbe9 100%); }
   body header {
     width: 100%;
