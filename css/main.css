@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body main .pmain {
+  display: flex;
+  text-align: center; }
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +29,7 @@ body {
     body header .majo {
       width: 6em;
       height: 6em;
-      padding: 0px; }
+      padding: 0; }
     body header li {
       list-style: none; }
     body header .barra:hover {
@@ -63,9 +67,7 @@ body {
       text-align: center;
       gap: 20px; }
     body main .pmain {
-      padding: 2px;
-      display: flex;
-      text-align: center; }
+      padding: 2px; }
 
 footer {
   background: #aed8ee;
@@ -123,20 +125,13 @@ footer {
   100% {
     box-shadow: 0 0 0 5px #49ae4c; } }
 
-@media screen and (max-width: 850px) {
-  .majo {
-    height: 300px; }
-  .pmain {
-    text-align: flex;
-    align-items: center; } }
-
-#tabla-precios {
+.tprecios {
   padding: 2px;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 50px; }
+  margin: .6em;
+  margin-top: 40px; }
 
 /*Columnas*/
 .precio-col {
@@ -220,3 +215,15 @@ footer {
   color: black;
   transition: 0.5s;
   text-decoration: none; }
+
+@media screen and (max-width: 850px) {
+  .majo {
+    height: 300px; }
+  .pmain {
+    text-align: flex;
+    align-items: center; }
+  .tprecios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; } }

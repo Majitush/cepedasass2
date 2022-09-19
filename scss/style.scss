@@ -1,3 +1,15 @@
+
+
+
+
+@import "base/mixin";
+@import "base/listas";
+@import "base/variables";
+@import "base/extend";
+
+
+
+
 *{
     margin: 0;
     padding:0;
@@ -25,9 +37,7 @@ body{
     font-family: 'Oswald', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
         .majo{
-            width: 6em;
-            height:6em;
-            padding: 0px;
+            @include medidas( 6em, 6em, 0);
         } 
             li{
                 list-style: none;
@@ -89,8 +99,7 @@ body{
     
         .pmain{
             padding:2px;
-           display: flex;
-          text-align: center;
+            @extend %flex;
          
             
         }
@@ -184,27 +193,17 @@ body{
 
 
         } 
-        @media screen and (max-width:850px){
-            .majo{
-               height: 300px;
-            }
-            .pmain{
-                text-align: flex;
-                align-items: center;
-
-            }
-            
-            }
+        
          
-        #tabla-precios {
+        .tprecios {
        
             padding:2px;
             display: flex;
-            justify-content: center;
+            
             align-items: center;
             width:100%;
-            
-            margin-top:50px
+            margin: .6em;
+            margin-top:40px
            }
            
            /*Columnas*/
@@ -311,5 +310,26 @@ body{
             
             
            }
+           @media screen and (max-width:850px){
+            .majo{
+               height: 300px;
+            }
            
+
+
+              
+            .pmain{
+                text-align: flex;
+                align-items: center;
+
+            }
+            .tprecios{
+                 display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+           
+            }
+        }
+            
         
